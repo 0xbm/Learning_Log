@@ -2,3 +2,6 @@
 /.env
 /.DS_Store
 *.pyc
+/learning_log/.DS_Store
+/learning_log/learning_logs/.DS_Store
+/learning_log/learning_logs/templates/.DS_Store
