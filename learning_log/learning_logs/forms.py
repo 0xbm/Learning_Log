@@ -1,8 +1,6 @@
 from django import forms
 from .models import Topic, Entry
 
-# from django.db.models import fields
-
 
 class TopicForm(forms.ModelForm):
     class Meta:
