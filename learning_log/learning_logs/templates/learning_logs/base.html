@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-  <p><a href="{% url 'learning_logs:index' %}">Learning Log</a> -
-  <a href ='{% url 'learning_logs:topics' %}'>Tematy</a></p>
-  {% block content %} {% endblock content %}
-</body>
-</html>
+<p>
+  <a href="{% url 'learning_logs:index' %}">Learning Log</a> -
+  <a href ="{% url 'learning_logs:topics' %}">Tematy</a> -
+  {% if user.is_authenticated %}
+    Witaj, {{ user.username }}.
+    <a href="{% url 'users:logout' %}">Wyloguj</a>
+  {% else %}
+    <a href="{% url 'users:register' %}">Rejestruj</a> -
+    <a href="{% url 'users:login' %}">Zaloguj</a>
+  {% endif %}
+</p>
+
+{% block content %} {% endblock content %}
