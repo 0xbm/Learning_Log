@@ -25,8 +25,7 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
-        <li class="nav-item"><span class="navbar-text">Witaj, {{
-        user.username }}.</span></li>
+        <li class="nav-item"><span class="navbar-text">Witaj, {{ user.username }}.</span></li>
         <li class="nav-item">
           <a class="nav-link" href=
           "{% url 'users:logout' %}">Wyloguj</a>
