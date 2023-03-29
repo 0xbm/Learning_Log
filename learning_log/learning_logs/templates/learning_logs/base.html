@@ -25,18 +25,18 @@
       </ul>
       <ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
-        <li class="nav-item"><span class="navbar-text">Witaj, {{ user.username }}.</span></li>
+        <li class="nav-item"><span class="navbar-text">Hello, {{ user.username }}.</span></li>
         <li class="nav-item">
           <a class="nav-link" href=
-          "{% url 'users:logout' %}">Wyloguj</a>
+          "{% url 'users:logout' %}">Log out</a>
         </li>{% else %}
         <li class="nav-item">
           <a class="nav-link" href=
-          "{% url 'users:register' %}">Rejestruj</a>
+          "{% url 'users:register' %}">Register</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href=
-          "{% url 'users:login' %}">Zaloguj</a>
+          "{% url 'users:login' %}">Log in</a>
         </li>{% endif %}
       </ul>
     </div>
